@@ -1,0 +1,23 @@
+﻿<local:MyCard Title="介绍：">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="欢迎使用由小树科技工作室制作的PCL官方启动器，(可更新版)。" />
+        <local:MyHint Text="小树科技版权所有！" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="尽情的玩耍吧！" />
+
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="传送门">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="小树科技官方网站，终点站入口。" />
+        <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="打开 小树科技" EventType="打开网页" EventData="https://terminal-station.github.io/" />
+        <TextBlock Margin="0,10,0,10"
+                   Text="公告" />
+        <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="公告" EventType="弹出窗口" EventData="公告|设计制作：\n小树\n憨憨的小张" />
+    </StackPanel>
+</local:MyCard>
