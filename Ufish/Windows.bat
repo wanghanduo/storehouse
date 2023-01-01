@@ -1,6 +1,6 @@
 @echo off
 mode con cols=85 lines=35
-ver | find "版本" > NUL && title 小树的KMS脚本 V22.09.28 || title xiaoshu's KMS script V22.09.28
+ver | find "版本" > NUL && title 沧水的KMS脚本 V22.09.28 || title Cangshui's KMS script V22.09.28
 setlocal EnableDelayedExpansion&color 70 & cd /d "%~dp0"
 %1 %2
 ver | find "5."> NUL && goto :start
@@ -31,19 +31,21 @@ ver | find "6.2." > NUL &&  set winv=8
 ver | find "6.3." > NUL &&  set winv=8.1
 ver | find "10.0." > NUL &&  set winv=10
 ver | find "版本" >NUL && set syslang=cn
+ver | find "版本" >nul && echo 提问建议请留言http://kms.cangshui.net || echo Feedback: http://kms.cangshui.net
+ver | find "版本" >nul && echo 捐赠赞助请访问http://shop.cangshui.net || echo Tip: http://shop.cangshui.net
 if  "%syslang%"=="cn" (
   if  "%systabs%"=="1" ( echo ╔════════════════════════════════════激活选项══════════════════════════════════════╗ )
   echo ║【A】KMS激活Windows                                                               ║
-  echo ║                                                                                  ║
+  echo ║【B】KMS激活Office                                                                ║
   echo ║【C】清除Windows KMS                                                              ║
-  echo ║                                                                                  ║
+  echo ║【D】清除Office KMS                                                               ║
   echo ║【E】查看支持的windows版本                                                        ║
   ) else (
   if  "%systabs%"=="1" ( echo ╔════════════════════════════════Activation option═════════════════════════════════╗ )
   echo ║[A] KMS activate windows                                                          ║
-  echo ║                                                                                  ║
+  echo ║[B] KMS activate Office                                                           ║
   echo ║[C] Clear Windows KMS                                                             ║
-  echo ║                                                                                  ║
+  echo ║[D] Clear Office KMS                                                              ║
   echo ║[E] Supported windows version                                                     ║
 )
 
@@ -81,8 +83,8 @@ if /i "%xuanze%"=="10" cls&goto addmypcico
 :start2
 cls
 echo.
-
-
+ver | find "版本" >nul && echo 提问建议请留言http://kms.cangshui.net || echo Feedback: http://kms.cangshui.net
+ver | find "版本" >nul && echo 捐赠赞助请访问http://shop.cangshui.net || echo Tip: http://shop.cangshui.net
 echo.
 if  "%KMS_Sev%"=="kms-shanghai01.cangshui.net" (
     echo 正在检查能否连接到KMS主服务器...
@@ -265,8 +267,8 @@ exit
 
 :start1
 cls
-
-
+ver | find "版本" >nul && echo 提问建议请留言http://kms.cangshui.net || echo Feedback: http://kms.cangshui.net
+ver | find "版本" >nul && echo 捐赠赞助请访问http://shop.cangshui.net || echo Tip: http://shop.cangshui.net
 echo.
 if  "%KMS_Sev%"=="kms-shanghai01.cangshui.net" (
     echo 正在检查能否连接到KMS主服务器...
