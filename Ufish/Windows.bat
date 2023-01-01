@@ -1,6 +1,6 @@
 @echo off
 mode con cols=85 lines=35
-ver | find "版本" > NUL && title 小树的KMS脚本 V22.09.28 || title Xiaoshu's KMS script V22.09.28
+ver | find "版本" > NUL && title 小树的KMS脚本 V22.09.28 || title xiaoshu's KMS script V22.09.28
 setlocal EnableDelayedExpansion&color 70 & cd /d "%~dp0"
 %1 %2
 ver | find "5."> NUL && goto :start
@@ -31,20 +31,35 @@ ver | find "6.2." > NUL &&  set winv=8
 ver | find "6.3." > NUL &&  set winv=8.1
 ver | find "10.0." > NUL &&  set winv=10
 ver | find "版本" >NUL && set syslang=cn
-ver | find "版本" >nul && echo 提问建议请留言  
-ver | find "版本" >nul && echo 捐赠赞助请访问  
 if  "%syslang%"=="cn" (
   if  "%systabs%"=="1" ( echo ╔════════════════════════════════════激活选项══════════════════════════════════════╗ )
   echo ║【A】KMS激活Windows                                                               ║
+  echo ║                                                                                  ║
   echo ║【C】清除Windows KMS                                                              ║
+  echo ║                                                                                  ║
   echo ║【E】查看支持的windows版本                                                        ║
   ) else (
   if  "%systabs%"=="1" ( echo ╔════════════════════════════════Activation option═════════════════════════════════╗ )
   echo ║[A] KMS activate windows                                                          ║
+  echo ║                                                                                  ║
   echo ║[C] Clear Windows KMS                                                             ║
+  echo ║                                                                                  ║
   echo ║[E] Supported windows version                                                     ║
 )
+
+if  "%systabs%"=="1" ( echo ╠═════════════════════════════════════其他工具═════════════════════════════════════╣ )
+echo ║【1】去除Office显示“许可证并非正版”                                             ║ 
+echo ║【2】去除快捷方式小箭头                                                           ║
+echo ║【3】恢复快捷方式小箭头                                                           ║
+echo ║【4】Win11切换旧版桌面右键菜单                                                    ║
+echo ║【5】Win11恢复新版桌面右键菜单                                                    ║ 
+echo ║【6】去除快捷方式小盾牌                                                           ║
+echo ║【7】恢复快捷方式小盾牌                                                           ║ 
+echo ║【8】去除创建快捷方式时的后缀“-快捷方式”                                        ║
+echo ║【9】去除运行可执行文件时的警告弹窗                                               ║
+echo ║【10】向桌面添加“此电脑”图标                                                    ║
 if  "%systabs%"=="1" ( echo ╠═════════════════════════════════════输入选择═════════════════════════════════════╣ )
+
 ver | find "版本" >nul && set /p xuanze=║ 请输入你的选择: || set /p xuanze=║ Please enter your choice:
 if /i "%xuanze%"=="a" cls&goto start1
 if /i "%xuanze%"=="b" cls&goto start2
@@ -66,8 +81,8 @@ if /i "%xuanze%"=="10" cls&goto addmypcico
 :start2
 cls
 echo.
-ver | find "版本" >nul && echo 提问建议请留言  
-ver | find "版本" >nul && echo 捐赠赞助请访问  
+
+
 echo.
 if  "%KMS_Sev%"=="kms-shanghai01.cangshui.net" (
     echo 正在检查能否连接到KMS主服务器...
@@ -250,8 +265,8 @@ exit
 
 :start1
 cls
-ver | find "版本" >nul && echo 提问建议请留言  
-ver | find "版本" >nul && echo 捐赠赞助请访问  
+
+
 echo.
 if  "%KMS_Sev%"=="kms-shanghai01.cangshui.net" (
     echo 正在检查能否连接到KMS主服务器...
